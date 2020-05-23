@@ -80,12 +80,15 @@ open class DropboxClientsManager {
     }
 
     static func setupAuthorizedClient(_ accessToken: DropboxAccessToken?, transportClient: DropboxTransportClient?) {
-        if let accessToken = accessToken {
+        precondition(DropboxOAuthManager.sharedOAuthManager != nil, "Call `DropboxClientsManager.setupWithAppKey` before calling this method")
+
+        if let accessToken = accessToken, let oauthManager = DropboxOAuthManager.sharedOAuthManager {
+            let accessTokenProvider = oauthManager.accessTokenProviderForToken(accessToken)
             if let transportClient = transportClient {
-                transportClient.accessToken = accessToken.accessToken
+                transportClient.accessTokenProvider = accessTokenProvider
                 authorizedClient = DropboxClient(transportClient: transportClient)
             } else {
-                authorizedClient = DropboxClient(accessToken: accessToken.accessToken)
+                authorizedClient = DropboxClient(accessTokenProvider: accessTokenProvider)
             }
         } else {
             if let transportClient = transportClient {
@@ -95,12 +98,15 @@ open class DropboxClientsManager {
     }
 
     static func setupAuthorizedTeamClient(_ accessToken: DropboxAccessToken?, transportClient: DropboxTransportClient?) {
-        if let accessToken = accessToken {
+        precondition(DropboxOAuthManager.sharedOAuthManager != nil, "Call `DropboxClientsManager.setupWithAppKey` before calling this method")
+
+        if let accessToken = accessToken, let oauthManager = DropboxOAuthManager.sharedOAuthManager {
+            let accessTokenProvider = oauthManager.accessTokenProviderForToken(accessToken)
             if let transportClient = transportClient {
-                transportClient.accessToken = accessToken.accessToken
+                transportClient.accessTokenProvider = accessTokenProvider
                 authorizedTeamClient = DropboxTeamClient(transportClient: transportClient)
             } else {
-                authorizedTeamClient = DropboxTeamClient(accessToken: accessToken.accessToken)
+                authorizedTeamClient = DropboxTeamClient(accessTokenProvider: accessTokenProvider)
             }
         } else {
             if let transportClient = transportClient {
