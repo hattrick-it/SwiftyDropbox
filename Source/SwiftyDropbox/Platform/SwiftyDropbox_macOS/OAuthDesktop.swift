@@ -3,6 +3,7 @@
 ///
 
 import Foundation
+#if canImport(AppKit)
 import AppKit
 import WebKit
 
@@ -77,3 +78,4 @@ public class DesktopSharedApplication: SharedApplication {
         // TODO: Implement when OAuth code flow is introduced into Desktop SDK.
     }
 }
+#endif

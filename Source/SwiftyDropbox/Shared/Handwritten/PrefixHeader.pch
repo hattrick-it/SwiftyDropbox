@@ -1,0 +1,12 @@
+//
+//  PrefixHeader.pch
+//  
+//
+//  Created by Mateusz Szlosek on 28/05/2020.
+//
+
+#if canImport(UIKit)
+  #import <UIKit/UIKit.h>
+#else
+  #import <Cocoa/Cocoa.h>
+#endif

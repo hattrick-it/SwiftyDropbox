@@ -3,6 +3,7 @@
 ///
 
 import Foundation
+#if canImport(UIKit)
 import UIKit
 
 /// A VC with a loading spinner at its view center.
@@ -34,3 +35,4 @@ class LoadingViewController: UIViewController {
         loadingSpinner.startAnimating()
     }
 }
+#endif

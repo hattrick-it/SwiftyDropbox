@@ -4,6 +4,8 @@
 
 import Foundation
 
+@_exported import SwiftyDropbox_ObjC
+
 // 10 MB file chunk size
 let fileChunkSize: UInt64 = 10 * 1024 * 1024
 let timeoutInSec = 200

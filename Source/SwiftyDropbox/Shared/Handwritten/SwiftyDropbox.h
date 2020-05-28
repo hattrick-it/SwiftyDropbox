@@ -7,7 +7,7 @@
 
 #import "TargetConditionals.h"
 
-#if TARGET_OS_IPHONE
+#if canImport(UIKit)
   #import <UIKit/UIKit.h>
 #else
   #import <Cocoa/Cocoa.h>

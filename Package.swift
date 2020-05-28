@@ -22,12 +22,17 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.0.0")),
     ],
+    
     targets: [
         .target(
+            name: "SwiftyDropbox-ObjC",
+            dependencies: [],
+            path: "Source/SwiftyDropbox-ObjC"
+        ),
+        .target(
             name: "SwiftyDropbox",
-            dependencies: ["Alamofire"],
-            path: "Source",
-            exclude: ["SwiftyDropbox/Platform/SwiftyDropbox_macOS"]
-            )
+            dependencies: ["SwiftyDropbox-ObjC", "Alamofire"],
+            path: "Source/SwiftyDropbox"
+        )
     ]
 )
