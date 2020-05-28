@@ -6,9 +6,8 @@ import Foundation
 import Alamofire
 
 class OAuthTokenExchangeRequest {
-    private static let sessionManager: SessionManager = {
-        let sessionManager = SessionManager(configuration: .default)
-        sessionManager.startRequestsImmediately = false
+    private static let sessionManager: Session = {
+        let sessionManager = Session(configuration: .default, startRequestsImmediately: false)
         return sessionManager
     }()
 
@@ -32,7 +31,7 @@ class OAuthTokenExchangeRequest {
             "\(ApiClientConstants.apiHost)/oauth2/token",
             method: .post,
             parameters: params,
-            headers: headers)
+            headers: HTTPHeaders(headers))
     }
 
     func start(completion: @escaping DropboxOAuthCompletion) {
