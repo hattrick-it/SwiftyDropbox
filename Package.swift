@@ -26,6 +26,8 @@ let package = Package(
         .target(
             name: "SwiftyDropbox",
             dependencies: ["Alamofire"],
-            path: "Source"),
+            path: "Source",
+            exclude: ["SwiftyDropbox/Platform/SwiftyDropbox_macOS"]
+            )
     ]
 )
