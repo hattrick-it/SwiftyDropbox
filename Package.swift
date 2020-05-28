@@ -1,4 +1,5 @@
 // swift-tools-version:5.2
+
 ///
 /// Copyright (c) 2016 Dropbox, Inc. All rights reserved.
 ///
@@ -7,6 +8,12 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftyDropbox",
+    platforms: [
+        .macOS(.v10_13),
+        .iOS(.v11),
+        .tvOS(.v11),
+        .watchOS(.v4)
+    ],
     products: [
         .library(
             name: "SwiftyDropbox",
