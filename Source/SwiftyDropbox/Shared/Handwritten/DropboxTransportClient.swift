@@ -495,7 +495,7 @@ open class RpcRequest<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request
         self.request.cancel()
     }
 
-    @discardableResult open func response(queue: DispatchQueue? = nil, completionHandler: @escaping (RSerial.ValueType?, CallError<ESerial.ValueType>?) -> Void) -> Self {
+    @discardableResult open func response(queue: DispatchQueue? = .main, completionHandler: @escaping (RSerial.ValueType?, CallError<ESerial.ValueType>?) -> Void) -> Self {
         self.request.validate().response(queue: queue!) { response in
             if let error = response.error {
                 completionHandler(nil, self.handleResponseError(response.response, data: response.data!, error: error))
@@ -527,7 +527,7 @@ open class UploadRequest<RSerial: JSONSerializer, ESerial: JSONSerializer>: Requ
         self.request.cancel()
     }
 
-    @discardableResult open func response(queue: DispatchQueue? = nil, completionHandler: @escaping (RSerial.ValueType?, CallError<ESerial.ValueType>?) -> Void) -> Self {
+    @discardableResult open func response(queue: DispatchQueue? = .main, completionHandler: @escaping (RSerial.ValueType?, CallError<ESerial.ValueType>?) -> Void) -> Self {
         self.request.validate().response(queue: queue!) { response in
             if let error = response.error {
                 completionHandler(nil, self.handleResponseError(response.response, data: response.data!, error: error))
@@ -564,7 +564,7 @@ open class DownloadRequestFile<RSerial: JSONSerializer, ESerial: JSONSerializer>
         self.request.cancel()
     }
 
-    @discardableResult open func response(queue: DispatchQueue? = nil, completionHandler: @escaping ((RSerial.ValueType, URL)?, CallError<ESerial.ValueType>?) -> Void) -> Self {
+    @discardableResult open func response(queue: DispatchQueue? = .main, completionHandler: @escaping ((RSerial.ValueType, URL)?, CallError<ESerial.ValueType>?) -> Void) -> Self {
         self.request.validate().response(queue: queue!) { response in
             if let error = response.error {
                 completionHandler(nil, self.handleResponseError(response.response, data: self.errorMessage, error: error))
@@ -601,7 +601,7 @@ open class DownloadRequestMemory<RSerial: JSONSerializer, ESerial: JSONSerialize
         self.request.cancel()
     }
 
-    @discardableResult open func response(queue: DispatchQueue? = nil, completionHandler: @escaping ((RSerial.ValueType, Data)?, CallError<ESerial.ValueType>?) -> Void) -> Self {
+    @discardableResult open func response(queue: DispatchQueue? = .main, completionHandler: @escaping ((RSerial.ValueType, Data)?, CallError<ESerial.ValueType>?) -> Void) -> Self {
         self.request.validate().response(queue: queue!) { response in
             if let error = response.error {
                 completionHandler(nil, self.handleResponseError(response.response, data: response.data, error: error))
