@@ -35,7 +35,7 @@ open class DropboxTransportClient {
         let manager = Session(configuration: config, delegate: delegate, startRequestsImmediately: false, serverTrustManager: serverTrustPolicyManager)
 
         let backgroundManager = { () -> Session in
-            let backgroundConfig = URLSessionConfiguration.background(withIdentifier: "com.dropbox.SwiftyDropbox." + UUID().uuidString)
+            let backgroundConfig = URLSessionConfiguration.af.default 
             if let sharedContainerIdentifier = sharedContainerIdentifier{
                 backgroundConfig.sharedContainerIdentifier = sharedContainerIdentifier
             }
