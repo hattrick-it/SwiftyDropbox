@@ -82,10 +82,6 @@
 		F2478F231ECCD0B300BAF014 /* CustomRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2478EE31ECCD0B300BAF014 /* CustomRoutes.swift */; };
 		F2478F241ECCD0B300BAF014 /* CustomTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2478EE41ECCD0B300BAF014 /* CustomTasks.swift */; };
 		F2478F251ECCD0B300BAF014 /* CustomTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2478EE41ECCD0B300BAF014 /* CustomTasks.swift */; };
-		F2478F261ECCD0B300BAF014 /* DBChunkInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = F2478EE51ECCD0B300BAF014 /* DBChunkInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2478F271ECCD0B300BAF014 /* DBChunkInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = F2478EE51ECCD0B300BAF014 /* DBChunkInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2478F281ECCD0B300BAF014 /* DBChunkInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F2478EE61ECCD0B300BAF014 /* DBChunkInputStream.m */; };
-		F2478F291ECCD0B300BAF014 /* DBChunkInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F2478EE61ECCD0B300BAF014 /* DBChunkInputStream.m */; };
 		F2478F2A1ECCD0B300BAF014 /* DropboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2478EE71ECCD0B300BAF014 /* DropboxClient.swift */; };
 		F2478F2B1ECCD0B300BAF014 /* DropboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2478EE71ECCD0B300BAF014 /* DropboxClient.swift */; };
 		F2478F2C1ECCD0B300BAF014 /* DropboxClientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2478EE81ECCD0B300BAF014 /* DropboxClientsManager.swift */; };
@@ -152,8 +148,6 @@
 		F2478EE21ECCD0B300BAF014 /* Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
 		F2478EE31ECCD0B300BAF014 /* CustomRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRoutes.swift; sourceTree = "<group>"; };
 		F2478EE41ECCD0B300BAF014 /* CustomTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTasks.swift; sourceTree = "<group>"; };
-		F2478EE51ECCD0B300BAF014 /* DBChunkInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBChunkInputStream.h; sourceTree = "<group>"; };
-		F2478EE61ECCD0B300BAF014 /* DBChunkInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChunkInputStream.m; sourceTree = "<group>"; };
 		F2478EE71ECCD0B300BAF014 /* DropboxClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxClient.swift; sourceTree = "<group>"; };
 		F2478EE81ECCD0B300BAF014 /* DropboxClientsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxClientsManager.swift; sourceTree = "<group>"; };
 		F2478EE91ECCD0B300BAF014 /* DropboxTeamClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxTeamClient.swift; sourceTree = "<group>"; };
@@ -273,8 +267,6 @@
 				F2478EE21ECCD0B300BAF014 /* Custom.swift */,
 				F2478EE31ECCD0B300BAF014 /* CustomRoutes.swift */,
 				F2478EE41ECCD0B300BAF014 /* CustomTasks.swift */,
-				F2478EE51ECCD0B300BAF014 /* DBChunkInputStream.h */,
-				F2478EE61ECCD0B300BAF014 /* DBChunkInputStream.m */,
 				F2478EE71ECCD0B300BAF014 /* DropboxClient.swift */,
 				F2478EE81ECCD0B300BAF014 /* DropboxClientsManager.swift */,
 				F2478EE91ECCD0B300BAF014 /* DropboxTeamClient.swift */,
@@ -356,7 +348,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2478F261ECCD0B300BAF014 /* DBChunkInputStream.h in Headers */,
 				F2478F341ECCD0B300BAF014 /* SwiftyDropbox.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,7 +356,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2478F271ECCD0B300BAF014 /* DBChunkInputStream.h in Headers */,
 				F2478F351ECCD0B300BAF014 /* SwiftyDropbox.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,7 +492,6 @@
 				BF082C1D24636E1E000C8469 /* OAuthTokenRequest.swift in Sources */,
 				9B70B79822BD733A0059DA1E /* SeenState.swift in Sources */,
 				9B70B78222BD733A0059DA1E /* FileRequests.swift in Sources */,
-				F2478F281ECCD0B300BAF014 /* DBChunkInputStream.m in Sources */,
 				9B70B78C22BD733A0059DA1E /* Async.swift in Sources */,
 				9B70B78022BD733A0059DA1E /* Team.swift in Sources */,
 				9B70B77C22BD733A0059DA1E /* FilesRoutes.swift in Sources */,
@@ -554,7 +543,6 @@
 				9B70B77522BD733A0059DA1E /* Sharing.swift in Sources */,
 				9B70B79922BD733A0059DA1E /* SeenState.swift in Sources */,
 				9B70B78322BD733A0059DA1E /* FileRequests.swift in Sources */,
-				F2478F291ECCD0B300BAF014 /* DBChunkInputStream.m in Sources */,
 				9B70B78D22BD733A0059DA1E /* Async.swift in Sources */,
 				9B70B78122BD733A0059DA1E /* Team.swift in Sources */,
 				9B70B77D22BD733A0059DA1E /* FilesRoutes.swift in Sources */,
